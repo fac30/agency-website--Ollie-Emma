@@ -1,19 +1,53 @@
 main {
   display: flex;
+  flex-direction: column;
 }
 
 /* ---------------------core layout - stack--------------------- */
+/* background panels */
 .stack-xl {
   width: 100%;
   height: 100vh;
 }
 
-.stack-lg {
+.flex-col {
   display: flex;
-  width: 70%;
-  height: 70vh;
+  flex-direction: column;
 }
 
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+}
+/* centred content boxes on each pane */
+.stack-lg {
+  width: 70%;
+  height: 70%;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+/* right-aligned dark text boxes */
+.stack-md {
+  background-color: #293241;
+  width: 50%;
+  align-self: flex-end;
+  padding: 1rem;
+}
+
+/* smaller text boxes for member info */
+.stack-sm {
+  border-style: solid;
+  border-color: #E0FBFC;
+  border-width: 1px;
+  width: 40%;
+  height: 90%
+}
+
+.footer-content {
+  height: 5rem;
+  padding-bottom: 1rem;
+}
 /* ---------------------background colours--------------------- */
 .bg-1 {
   background-color: #293241;
@@ -25,21 +59,32 @@ main {
 
 footer {
   background-color: #98C1D9;
+  height: 10%;
+}
+
+.img-bg {
+  /* placeholder for now!*/
+  background-image: url("corinne-kutz-image.jpg");
+  opacity: 0.2;
 }
 
 /* ---------------------text elements--------------------- */
 .heading {
   color: #EE6C4D;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  opacity: 1;
+  margin-left: 10%;
+  margin-top: 3%;
 }
 
 h1 {
-  font-size: x-large;
+  font-size: 4rem;
   font-weight: bold;
 }
 
 h2 {
-  font-size: large;
+  font-size: 2rem;
+  font-weight: 200;
 }
 
 p {
@@ -52,29 +97,33 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: x-small;
   color: #293241;
+  margin-top: 1rem;
+  margin-left: 1rem;
 }
 
 /* ---------------------images--------------------- */
-.faded-img {
-  opacity: 25%;
-}
-
 .member-img {
-  height: 3rem;
-  width: 3rem;
+  width: 100%;
+  height: width;
 }
 
 /* ---------------------form--------------------- */
 form {
   display: flex;
   flex-direction: column;
-  align-content: space-between;
 }
 
 input {
+  border-style: solid;
+  border-width: 1px;
   border-color: #293241;
-  background-color: none;
+  background-color: #E0FBFC;
+  height: 2rem;
   }  
+
+.space-top  > * + * {
+  margin-top: 5%
+}
 
 label {
   font-size: x-small;
@@ -84,5 +133,8 @@ label {
 button {
   border: none;
   background-color: #293241;
-  color: #98C1D9;
+  color: #E0FBFC;
+  height: 2rem;
+  width: 10%;
+  align-self: flex-end;
 }
