@@ -8,6 +8,98 @@ main {
   flex-direction: column;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(50, 50, 50);
+  text-align: center;
+}
+
+/* --------------------- navbar --------------------- */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 100vh;
+
+  overflow: hidden;
+  text-align: right;
+
+  background-color: rgba(0, 0, 0, 0.7);
+
+  transition: all 0.2s;
+}
+
+/* menu button */
+#nav-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 35px;
+  height: 35px;
+
+  border: 2px solid white;
+  border-radius: 0.4rem;
+
+  opacity: 0.5;
+  background-color: #293241;
+  background: url(assets/menu-svgrepo-com.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70% 70%;
+
+  transition: all 0.2s;
+}
+
+#nav-toggle:hover {
+  opacity: 1 !important;
+}
+
+/* X inside the nav */
+#nav-toggle-close {
+  margin-top: 1.2rem;
+  margin-right: 1rem;
+  width: 35px;
+  height: 35px;
+  opacity: 0.5;
+
+  background: none;
+  border: 2px solid white;
+  border-radius: 0.4rem;
+  transition: all 0.2s;
+}
+#nav-toggle-close:hover {
+  opacity: 1;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+#menu li {
+  width: 200px;
+}
+
+#menu li a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  transition: all 0.2s;
+}
+
+#menu li a:hover {
+  background-color: white;
+  color: black;
+}
+
 /* ---------------------core layout - stack--------------------- */
 /* background panels */
 .stack-xl {

@@ -8,8 +8,21 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <nav></nav>
-    <main>
+    <!-- Navigation Menu Toggle Button -->
+    <button id="nav-toggle" onclick="toggleNav()"></button>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar" id="navbar">
+      <button id="nav-toggle-close" onclick="toggleNav()">X</button>
+      <ul id="menu">
+        <li><a href="#main">top</a></li>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#members">Members</a></li>
+        <li><a href="#contact">Get in touch</a></li>
+      </ul>
+    </nav>
+
+    <main id="main">
       <section class="stack-xl bg-1">
         <h1 class="heading" id="main-title">Ollie & Emma's agency</h1>
         <div class="stack-lg img-bg flex-col"></div>
