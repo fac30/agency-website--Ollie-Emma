@@ -1,3 +1,8 @@
+html,
+body {
+  margin: 0;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -38,10 +43,10 @@ main {
 /* smaller text boxes for member info */
 .stack-sm {
   border-style: solid;
-  border-color: #E0FBFC;
+  border-color: #e0fbfc;
   border-width: 1px;
   width: 40%;
-  height: 90%
+  height: 90%;
 }
 
 .footer-content {
@@ -54,11 +59,11 @@ main {
 }
 
 .bg-2 {
-  background-color: #E0FBFC;
+  background-color: #e0fbfc;
 }
 
 footer {
-  background-color: #98C1D9;
+  background-color: #98c1d9;
   height: 10%;
 }
 
@@ -70,8 +75,8 @@ footer {
 
 /* ---------------------text elements--------------------- */
 .heading {
-  color: #EE6C4D;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #ee6c4d;
+  font-family: Georgia, "Times New Roman", Times, serif;
   opacity: 1;
   margin-left: 10%;
   margin-top: 3%;
@@ -89,7 +94,7 @@ h2 {
 
 p {
   font-family: Arial, Helvetica, sans-serif;
-  color: #E0FBFC;
+  color: #e0fbfc;
   font-size: small;
 }
 
@@ -117,24 +122,26 @@ input {
   border-style: solid;
   border-width: 1px;
   border-color: #293241;
-  background-color: #E0FBFC;
+  background-color: #e0fbfc;
   height: 2rem;
-  }  
+}
 
-.space-top  > * + * {
-  margin-top: 5%
+.space-top > * + * {
+  margin-top: 5%;
 }
 
 label {
   font-size: x-small;
-  color: #6D798E;
+  color: #6d798e;
 }
 
-button {
+#submit-button {
   border: none;
   background-color: #293241;
-  color: #E0FBFC;
+  color: #e0fbfc;
   height: 2rem;
-  width: 10%;
+  width: 5rem;
   align-self: flex-end;
+  text-align: center;
+  cursor: pointer;
 }
