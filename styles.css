@@ -42,7 +42,7 @@ body {
   width: 35px;
   height: 35px;
 
-  border: 2px solid white;
+  border: 2px solid #e0fbfc;
   border-radius: 0.4rem;
 
   opacity: 0.5;
@@ -57,6 +57,7 @@ body {
 
 #nav-toggle:hover {
   opacity: 1 !important;
+  cursor: pointer;
 }
 
 /* X inside the nav */
@@ -66,14 +67,17 @@ body {
   width: 35px;
   height: 35px;
   opacity: 0.5;
+  color: #e0fbfc;
 
   background: none;
-  border: 2px solid white;
+  border: 2px solid #e0fbfc;
   border-radius: 0.4rem;
   transition: all 0.2s;
 }
+
 #nav-toggle-close:hover {
   opacity: 1;
+  cursor: pointer;
 }
 
 #menu {
@@ -89,14 +93,14 @@ body {
 #menu li a {
   text-decoration: none;
   display: block;
-  color: white;
+  color: #e0fbfc;
   padding: 1rem;
   text-align: left;
   transition: all 0.2s;
 }
 
 #menu li a:hover {
-  background-color: white;
+  background-color: #e0fbfc;
   color: black;
 }
 
