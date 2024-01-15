@@ -44,6 +44,7 @@ body {
 
   border: 2px solid #e0fbfc;
   border-radius: 0.4rem;
+  color: #ee6c4d;
 
   opacity: 0.5;
   background-color: #293241;
@@ -67,7 +68,7 @@ body {
   width: 35px;
   height: 35px;
   opacity: 0.5;
-  color: #e0fbfc;
+  color: #ee6c4d;
 
   background: none;
   border: 2px solid #e0fbfc;
