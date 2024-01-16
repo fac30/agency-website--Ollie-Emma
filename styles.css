@@ -42,21 +42,24 @@ body {
   width: 35px;
   height: 35px;
 
-  border: 2px solid white;
+  border: 2px solid #e0fbfc;
   border-radius: 0.4rem;
+  color: #ee6c4d;
 
   opacity: 0.5;
   background-color: #293241;
-  background: url(assets/menu-svgrepo-com.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 70% 70%;
 
   transition: all 0.2s;
 }
 
+#nav-toggle img {
+  width: 100%;
+  height: 100%;
+}
+
 #nav-toggle:hover {
   opacity: 1 !important;
+  cursor: pointer;
 }
 
 /* X inside the nav */
@@ -66,14 +69,17 @@ body {
   width: 35px;
   height: 35px;
   opacity: 0.5;
+  color: #ee6c4d;
 
   background: none;
-  border: 2px solid white;
+  border: 2px solid #ee6c4d;
   border-radius: 0.4rem;
   transition: all 0.2s;
 }
+
 #nav-toggle-close:hover {
   opacity: 1;
+  cursor: pointer;
 }
 
 #menu {
@@ -89,14 +95,14 @@ body {
 #menu li a {
   text-decoration: none;
   display: block;
-  color: white;
+  color: #e0fbfc;
   padding: 1rem;
   text-align: left;
   transition: all 0.2s;
 }
 
 #menu li a:hover {
-  background-color: white;
+  background-color: #e0fbfc;
   color: black;
 }
 
@@ -122,14 +128,17 @@ body {
   height: 70%;
   margin: auto;
   margin-top: 5rem;
+  position: relative;
+  overflow: hidden;
 }
 
 /* right-aligned dark text boxes */
 .stack-md {
-  background-color: #293241;
+  background-color: rgba(41, 50, 65, 0.9);
   width: 50%;
   align-self: flex-end;
   padding: 1rem;
+  z-index: 1;
 }
 
 /* smaller text boxes for member info */
@@ -159,10 +168,12 @@ footer {
   height: 10%;
 }
 
-.img-bg {
-  /* placeholder for now!*/
-  background-image: url("corinne-kutz-image.jpg");
-  opacity: 0.2;
+.img-bg img {
+  object-fit: contain;
+  position: absolute;
+  opacity: 0.6;
+  max-height: 100%;
+  z-index: 0;
 }
 
 /* ---------------------text elements--------------------- */
