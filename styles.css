@@ -3,8 +3,10 @@
   --bg-dark: #140A0B;
   --bg-light: #C7753F;
   --heading-colour: #3A5E96;
-  --text-colour: #F6D7CF;
+  --text-colour: #f9dcd5;
   --accent-colour: #6E4D5A;
+  font-family: var(--header-font);
+  --p-font: Arial, sans-serif; 
 }
 
 /* --------------------- core css --------------------- */
@@ -24,7 +26,7 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--p-font);
   background-color: rgb(50, 50, 50);
   text-align: center;
 }
@@ -54,9 +56,9 @@ body {
   width: 35px;
   height: 35px;
 
-  border: 2px solid #e0fbfc;
+  border: 2px solid var(--text-colour);
   border-radius: 0.4rem;
-  color: #ee6c4d;
+  color: var(--heading-colour);
 
   opacity: 0.5;
   background-color: var(--bg-dark);
@@ -85,10 +87,10 @@ body {
   width: 35px;
   height: 35px;
   opacity: 0.5;
-  color: #ee6c4d;
+  color: var(--text-colour);
 
   background: none;
-  border: 2px solid #ee6c4d;
+  border: 2px solid var(--text-colour);
   border-radius: 0.4rem;
   transition: all 0.2s;
 }
@@ -111,15 +113,15 @@ body {
 #menu li a {
   text-decoration: none;
   display: block;
-  color: #e0fbfc;
+  color: var(--text-colour);
   padding: 1rem;
   text-align: left;
   transition: all 0.2s;
 }
 
 #menu li a:hover {
-  background-color: #e0fbfc;
-  color: black;
+  background-color: var(--text-colour);
+  color: var(--bg-dark);
 }
 
 /* ---------------------core layout - stack--------------------- */
@@ -202,18 +204,18 @@ footer {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: bold;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 3.5rem;
   font-weight: 200;
 }
 
 p {
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--bg-light);
+  color: var(--text-colour);
   font-size: small;
 }
 
@@ -226,7 +228,7 @@ p {
 }
 
 /* ---------------------images--------------------- */
-.member-img {
+.home-img {
   width: 100%;
   height: width;
 }
