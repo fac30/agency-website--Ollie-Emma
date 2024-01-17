@@ -1,3 +1,14 @@
+/* --------------------- key variables --------------------- */
+:root {
+  --bg-dark: #140A0B;
+  --bg-light: #C7753F;
+  --heading-colour: #3A5E96;
+  --text-colour: #F6D7CF;
+  --accent-colour: #6E4D5A;
+}
+
+/* --------------------- core css --------------------- */
+
 html,
 body {
   margin: 0;
@@ -29,7 +40,8 @@ body {
   overflow: hidden;
   text-align: right;
 
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--accent-colour);
+  opacity: .8;
 
   transition: all 0.2s;
 }
@@ -46,7 +58,7 @@ body {
   border-radius: 0.4rem;
 
   opacity: 0.5;
-  background-color: #293241;
+  background-color: var(--bg-dark);
   background: url(assets/menu-svgrepo-com.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -126,16 +138,16 @@ body {
 
 /* right-aligned dark text boxes */
 .stack-md {
-  background-color: #293241;
+  background-color: var(--bg-dark);
   width: 50%;
   align-self: flex-end;
   padding: 1rem;
 }
 
-/* smaller text boxes for member info */
+/* smaller text boxes for info */
 .stack-sm {
   border-style: solid;
-  border-color: #e0fbfc;
+  border-color: var(--bg-light);
   border-width: 1px;
   width: 40%;
   height: 90%;
@@ -147,15 +159,15 @@ body {
 }
 /* ---------------------background colours--------------------- */
 .bg-1 {
-  background-color: #293241;
+  background-color: var(--bg-dark);
 }
 
 .bg-2 {
-  background-color: #e0fbfc;
+  background-color: var(--bg-light);
 }
 
 footer {
-  background-color: #98c1d9;
+  background-color: var(--accent-colour);
   height: 10%;
 }
 
@@ -167,7 +179,7 @@ footer {
 
 /* ---------------------text elements--------------------- */
 .heading {
-  color: #ee6c4d;
+  color: var(--heading-colour);
   font-family: Georgia, "Times New Roman", Times, serif;
   opacity: 1;
   margin-left: 10%;
@@ -186,14 +198,14 @@ h2 {
 
 p {
   font-family: Arial, Helvetica, sans-serif;
-  color: #e0fbfc;
+  color: var(--bg-light);
   font-size: small;
 }
 
 .footer-text {
   font-family: Arial, Helvetica, sans-serif;
   font-size: x-small;
-  color: #293241;
+  color: var(--bg-dark);
   margin-top: 1rem;
   margin-left: 1rem;
 }
@@ -213,8 +225,8 @@ form {
 input {
   border-style: solid;
   border-width: 1px;
-  border-color: #293241;
-  background-color: #e0fbfc;
+  border-color: var(--bg-dark);
+  background-color: var(--bg-light);
   height: 2rem;
 }
 
@@ -229,8 +241,8 @@ label {
 
 #submit-button {
   border: none;
-  background-color: #293241;
-  color: #e0fbfc;
+  background-color: var(--bg-dark);
+  color: var(--bg-light);
   height: 2rem;
   width: 5rem;
   align-self: flex-end;
