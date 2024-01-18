@@ -12,47 +12,28 @@
     <button id="nav-toggle" onclick="toggleNav()">
       <img src="/assets/menu-svgrepo-com.svg" />
     </button>
-
     <!-- Navigation Menu -->
     <nav class="navbar" id="navbar">
       <button id="nav-toggle-close" onclick="toggleNav()">X</button>
       <ul id="menu">
         <li><a href="#main">Welcome</a></li>
-        <li><a href="#about">About us</a></li>
-        <li><a href="#members">Members</a></li>
+        <li><a href="#who-we-are">Who we are</a></li>
+        <li><a href="#available-homes">Available homes</a></li>
         <li><a href="#contact">Get in touch</a></li>
       </ul>
     </nav>
+
     <!-- Welcome -->
     <main id="main">
       <section class="stack-xl bg-1">
         <h1 class="heading" id="main-title">HauntedHomes</h1>          
         <div class="stack-lg img-bg flex-col">
-          <img src="corinne-kutz-image.jpg" />
+          <img src="/assets/ghost-property-main.png" />
         </div>
       </section>
-    <!-- About -->
-      <section class="stack-xl bg-2" id="about">
-        <h2 class="heading">About HauntedHomes</h2>
-        <div class="stack-lg img-bg flex-col">
-          <img src="corinne-kutz-image.jpg" />
-          <div class="stack-md">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Members -->
-      <section class="stack-xl bg-1" id="members">
-        <h2 class="heading">Members</h2>
+    <!-- Who we are -->
+      <section class="stack-xl bg-2" id="who-we-are">
+        <h2 class="heading">Who we are</h2>
         <div class="stack-lg flex-row">
           <div class="stack-sm flex-col">
             <img class="member-img" src="corinne-kutz-image.jpg" />
@@ -78,6 +59,28 @@
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </div>
+        </div>
+      </section>
+      <!-- Available homes -->
+      <section class="stack-xl bg-1" id="available-homes">
+        <h2 class="heading">Available homes</h2>
+        <div class="stack-lg carousel" data-carousel>
+          <button class="carousel-button prev" data-carousel-button="prev"><</button>
+          <button class="carousel-button next"data-carousel-button="next">></button>
+          <ul data-slides>
+            <li class="slide" data-active="true">
+              <img src="/assets/ghost-prop-1.png">
+            </li>
+            <li class="slide">
+              <img src="/assets/ghost-prop-2.png">
+            </li>
+            <li class="slide">
+              <img src="/assets/ghost-prop-3.png">
+            </li>
+            <li class="slide">
+              <img src="/assets/ghost-prop-4.png">
+            </li>
+          </ul>
         </div>
       </section>
     <!-- Contact -->

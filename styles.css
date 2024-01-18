@@ -162,7 +162,7 @@ body {
 /* smaller text boxes for info */
 .stack-sm {
   border-style: solid;
-  border-color: var(--bg-light);
+  border-color: var(--text-colour);
   border-width: 1px;
   width: 40%;
   height: 90%;
@@ -265,4 +265,66 @@ input {
   align-self: flex-end;
   text-align: center;
   cursor: pointer;
+}
+
+/* ---------------------carousel--------------------- */
+
+.carousel {
+  width: 100%;
+  position: relative;
+}
+
+.slide{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide > img {
+  display: block;
+  object-fit: cover;
+}
+
+.slide[data-active] {
+/* .slide.active-slide { */
+  opacity: 1;
+  transition-delay: 0;
+  z-index: 1;
+}
+
+.carousel-button {
+  position: absolute;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  color: var(--bg-light);
+  opacity: .7;
+  padding: 0 .5 rem;
+  background-color: grey;
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: #b4b4b4;
+  cursor: pointer;
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
 }
