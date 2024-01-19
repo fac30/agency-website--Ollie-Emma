@@ -93,7 +93,7 @@ textarea {
   height: 100%;
   width: 100%;
   padding: 2rem;
-  color: crimson;
+  color: var(--bg-light);
   background-color: black;
   align-items: center;
   gap: 10px;
@@ -107,7 +107,7 @@ textarea {
   font-size: 2rem;
   margin-bottom: 2rem;
   color: var(--heading-colour);
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Creepster", system-ui;
 }
 
 #success-container img {
