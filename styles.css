@@ -235,6 +235,12 @@ p {
 
 /* ---------------------carousel--------------------- */
 
+.carousel-img {
+  position: relative;
+  margin: auto;
+  align-self: center;
+}
+
 .carousel {
   width: 50%;
   position: relative;
@@ -247,6 +253,8 @@ p {
   opacity: 0;
   transition: 200ms opacity ease-in-out;
   transition-delay: 200ms;
+  align-items: center;
+  justify-items: center;
 }
 
 .slide > img {
