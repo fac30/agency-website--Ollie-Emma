@@ -12,10 +12,12 @@ function toggleNav() {
 // carousel script
 const carouselButtons = document.querySelectorAll("[data-carousel-button]");
 
-carouselButtons.forEach(button => {
+carouselButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const offset = button.dataset.carouselButton === "next" ? 1 : -1;
-    const slides = button.closest("[data-carousel]").querySelector("[data-slides]");
+    const slides = button
+      .closest("[data-carousel]")
+      .querySelector("[data-slides]");
     const activeSlide = slides.querySelector("[data-active]");
     let newIndex = [...slides.children].indexOf(activeSlide) + offset;
     if (newIndex < 0) newIndex = slides.children.length - 1;
@@ -26,6 +28,24 @@ carouselButtons.forEach(button => {
 
     slides.children[newIndex].setAttribute("data-active", "true");
     slides.children[newIndex].classList.add("active-slide");
-    
   });
 });
+
+const form = document.getElementById("contact-form");
+document.getElementById("main").addEventListener("click", () => {
+  if (!closedNav) {
+    toggleNav();
+  }
+});
+
+// we show the element underneath when the user submits
+function onFormSubmit(event) {
+  event.preventDefault();
+  document.getElementById("form-container").style.display = "none";
+  document.getElementById("success-container").style.display = "block";
+}
+
+// shows red borders around the invalid fields when the user clicks submit.
+function onFormTrySubmit(event) {
+  form.classList.add("form-submitted");
+}
