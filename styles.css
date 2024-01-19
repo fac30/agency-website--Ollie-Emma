@@ -1,18 +1,13 @@
 /* --------------------- key variables --------------------- */
 :root {
-  --bg-dark: #140A0B;
-  --bg-light: #C7753F;
-  --heading-colour: #3A5E96;
+  --bg-dark: #140a0b;
+  --bg-light: #c7753f;
+  --heading-colour: #3a5e96;
   --text-colour: #f9dcd5;
   --accent-colour: #6E4D5A;
   --p-font: monospace; 
+  --heading-font: "Creepster", system-ui;
 }
-
-@font-face {
-  font-family: deutschGothic;
-  src: url('assets/Deutsch-Gothic.ttf.woff');
-}
-
 /* --------------------- core css --------------------- */
 
 html,
@@ -47,10 +42,10 @@ body {
   text-align: right;
 
   background-color: var(--accent-colour);
-  opacity: .9;
+  opacity: 0.8;
 
   transition: all 0.2s;
-  z-index: 3;
+  z-index: 10;
 }
 
 /* menu button */
@@ -201,7 +196,7 @@ footer {
 /* ---------------------text elements--------------------- */
 .heading {
   color: var(--heading-colour);
-  font-family: deutschGothic;
+  font-family: var(--heading-font);
   opacity: 1;
   margin: auto;
   margin-top: 3%;
@@ -209,7 +204,8 @@ footer {
 
 h1 {
   font-size: 5rem;
-  /* font-weight: bold; */
+  font-weight: bold;
+  overflow-wrap: break-word;
 }
 
 h2 {
@@ -237,42 +233,6 @@ p {
   height: width;
 }
 
-/* ---------------------form--------------------- */
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-input {
-  border-style: solid;
-  border-width: 1px;
-  border-color: var(--bg-dark);
-  background-color: var(--bg-light);
-  height: 2rem;
-  font-family:  var(--p-font);
-}
-
-::placeholder {
-  color: var(--bg-dark);
-  opacity: 1; /* Firefox */
-}
-
-.space-top > * + * {
-  margin-top: 5%;
-}
-
-#submit-button {
-  border: none;
-  background-color: var(--bg-dark);
-  color: var(--bg-light);
-  height: 2rem;
-  width: 5rem;
-  align-self: flex-end;
-  text-align: center;
-  cursor: pointer;
-  font-family:  var(--p-font);
-}
-
 /* ---------------------carousel--------------------- */
 
 .carousel {
@@ -280,7 +240,7 @@ input {
   position: relative;
 }
 
-.slide{
+.slide {
   position: absolute;
   inset: 0;
   opacity: 0;
@@ -308,8 +268,8 @@ input {
   z-index: 2;
   transform: translateY(-50%);
   color: var(--bg-light);
-  opacity: .7;
-  padding: 0 .5 rem;
+  opacity: 0.7;
+  padding: 0 0.5 rem;
   background-color: grey;
 }
 
