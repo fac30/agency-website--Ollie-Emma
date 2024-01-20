@@ -18,11 +18,11 @@
   </head>
   <body>
     <!-- Navigation Menu Toggle Button -->
-    <button id="nav-toggle" onclick="toggleNav()">
+    <button id="nav-toggle" aria-label="Open navigation bar" onclick="toggleNav()">
     </button>
     <!-- Navigation Menu -->
     <nav class="navbar" id="navbar">
-      <button id="nav-toggle-close" onclick="toggleNav()">X</button>
+      <button id="nav-toggle-close" aria-label="Close navigation bar" onclick="toggleNav()">X</button>
       <ul id="menu">
         <li><a href="#main">Welcome</a></li>
         <li><a href="#who-we-are">Who we are</a></li>
@@ -33,18 +33,18 @@
 
     <!-- Welcome -->
     <main id="main">
-      <section class="stack-xl bg-1 flex-col">
+      <section class="stack-xl bg-1 flex-col" tabindex="0">
         <h1 class="heading" id="main-title">HauntedHomes</h1>          
         <div class="stack-lg img-bg flex-col">
-          <img src="/assets/ghost-property-main.png" />
+          <img src="/assets/ghost-property-main.webp" alt="A grainy, black and white image of an old, large home."/>
         </div>
       </section>
       <!-- Who we are -->
-      <section class="stack-xl bg-2" id="who-we-are">
+      <section class="stack-xl bg-2" id="who-we-are" tabindex="0">
         <h2 class="heading">Who we are</h2>
         <div class="stack-lg flex-row">
           <div class="stack-sm flex-col">
-            <img class="member-img" src="assets\agent-1.png" />
+            <img class="member-img" src="assets\agent-1.webp" alt="A ghost wearing a dark purple suit, in front of a grey background."/>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -56,7 +56,7 @@
             </p>
           </div>
           <div class="stack-sm">
-            <img class="member-img" src="assets\agent-2.png" />
+            <img class="member-img" src="assets\agent-2.webp" alt="A ghost with a pointy head, purple and orange cheeks, dark moustache and white beard, in front of a grey background."/>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -70,31 +70,31 @@
         </div>
       </section>
       <!-- Available homes -->
-      <section class="stack-xl bg-1" id="available-homes">
+      <section class="stack-xl bg-1" id="available-homes" tabindex="0">
         <h2 class="heading">Available homes</h2>
         <div class="stack-lg carousel" data-carousel>
-          <button class="carousel-button prev" data-carousel-button="prev">&#x2039;</button>
-          <button class="carousel-button next"data-carousel-button="next">&#8250;</button>
+          <button class="carousel-button prev" data-carousel-button="prev" aria-label="Previous image">&#x2039;</button>
+          <button class="carousel-button next"data-carousel-button="next" aria-label="Next image">&#8250;</button>
           <ul data-slides>
             <li class="slide" data-active="true">
-              <img class="carousel-img" src="/assets/ghost-prop-1.png" />
+              <img class="carousel-img" src="/assets/ghost-prop-1.webp" alt="A white ghost in front of a Victorian terraced home at dusk." />
             </li>
             <li class="slide">
-              <img class="carousel-img" src="/assets/ghost-prop-2.png" />
+              <img class="carousel-img" src="/assets/ghost-prop-2.webp" alt="A faint white ghost in front of an Edwardian terraced home, in front of a lavender sky."/>
             </li>
             <li class="slide">
-              <img class="carousel-img" src="/assets/ghost-prop-3.png" />
+              <img class="carousel-img" src="/assets/ghost-prop-3.webp" alt="A blurry ghost in the bay window of a brick house."/>
             </li>
             <li class="slide">
-              <img class="carousel-img" src="/assets/ghost-prop-4.png" />
+              <img class="carousel-img" src="/assets/ghost-prop-4.webp" alt="A blurry, humanoid ghost in the window of a modern apartment building."/>
             </li>
           </ul>
         </div>
       </section>
       <!-- Contact -->
-      <section class="stack-xl bg-2" id="contact">
+      <section class="stack-xl bg-2" id="contact" tabindex="0">
         <div id="form-container" class="form-box">
-          <span class="contact-us-heading">Make contact with us</span>
+          <h2 class="heading form-head">Make contact with us</h2>
           <br />
           <br />
           <br />
@@ -123,7 +123,8 @@
         </div>
         <div id="success-container">
           <h2>Excellent!</h2>
-          <img src="assets/200w-1.gif" />
+          <video src="assets\skeleton-gif.webm" autoplay  loop></video>
+          <!-- <img src="assets\skeleton-gif.webm" alt="A gif of a dancing skeleton."/> -->
           <h3>
             ...a member of our team will <span>FIND YOU</span> shortly to assist
             with your home search.<br />
