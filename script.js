@@ -1,3 +1,4 @@
+// ----------------------------------- NAV BAR -----------------------------------------------------
 // toggles the nav bar when invoked. Used by the menu & X buttons
 let closedNav = true;
 function toggleNav() {
@@ -9,7 +10,7 @@ function toggleNav() {
   closedNav = !closedNav;
 }
 
-// carousel script
+// ----------------------------------- CAROUSEL -----------------------------------------------------
 const carouselButtons = document.querySelectorAll("[data-carousel-button]");
 
 carouselButtons.forEach((button) => {
@@ -37,7 +38,7 @@ document.getElementById("main").addEventListener("click", () => {
     toggleNav();
   }
 });
-
+// ----------------------------------- FORM -----------------------------------------------------
 // we show the element underneath when the user submits
 function onFormSubmit(event) {
   event.preventDefault();

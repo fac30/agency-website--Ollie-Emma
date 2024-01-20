@@ -16,6 +16,7 @@ input {
   background-color: transparent;
   border: 1px solid var(--bg-dark);
   border-radius: 0.2rem;
+  font-family: var(--p-font);
 }
 
 .form-box {
@@ -55,11 +56,11 @@ textarea {
 
   color: var(--bg-light);
   height: 2rem;
-  width: 5rem;
+  width: 100%;
   align-self: flex-end;
   text-align: center;
+  text-justify: center;
   cursor: pointer;
-  text-align: left;
   padding-left: 1rem;
   padding-right: 1rem;
   /* transition: all 0.2s; */
@@ -79,12 +80,8 @@ textarea {
   background-color: var(--bg-dark);
   color: red;
   text-transform: uppercase;
-  width: 10rem;
+  width: 100%;
   font-weight: 800;
-}
-
-#form-container {
-  /* display: none; */
 }
 
 #success-container {
@@ -93,8 +90,8 @@ textarea {
   height: 100%;
   width: 100%;
   padding: 2rem;
-  color: crimson;
-  background-color: black;
+  color: var(--bg-dark);
+  background-color: var(--bg-light);
   align-items: center;
   gap: 10px;
   font-family: var(--p-font);
@@ -107,13 +104,13 @@ textarea {
   font-size: 2rem;
   margin-bottom: 2rem;
   color: var(--heading-colour);
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Creepster", system-ui;
 }
 
 #success-container img {
   height: 20rem;
   height: 20rem;
-  border: 0.5rem solid brown;
+  border: 0.5rem solid var(--heading-colour);
   border-radius: 50%;
 }
 

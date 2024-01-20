@@ -4,11 +4,10 @@
   --bg-light: #c7753f;
   --heading-colour: #3a5e96;
   --text-colour: #f9dcd5;
-  --accent-colour: #6e4d5a;
-  font-family: var(--header-font);
-  --p-font: Arial, sans-serif;
+  --accent-colour: #6E4D5A;
+  --p-font: monospace; 
+  --heading-font: "Creepster", system-ui;
 }
-
 /* --------------------- core css --------------------- */
 
 html,
@@ -31,100 +30,9 @@ body {
   text-align: center;
 }
 
-/* --------------------- navbar --------------------- */
-#navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0px;
-  height: 100vh;
-
-  overflow: hidden;
-  text-align: right;
-
-  background-color: var(--accent-colour);
-  opacity: 0.8;
-
-  transition: all 0.2s;
-  z-index: 10;
-}
-
-/* menu button */
-#nav-toggle {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  width: 35px;
-  height: 35px;
-
-  border: 2px solid var(--text-colour);
-  border-radius: 0.4rem;
-  color: var(--heading-colour);
-
-  opacity: 0.5;
-  background-color: var(--bg-dark);
-  background: url(assets/menu-svgrepo-com.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 70% 70%;
-
-  transition: all 0.2s;
-}
-
-#nav-toggle img {
-  width: 100%;
-  height: 100%;
-}
-
-#nav-toggle:hover {
-  opacity: 1 !important;
-  cursor: pointer;
-}
-
-/* X inside the nav */
-#nav-toggle-close {
-  margin-top: 1.2rem;
-  margin-right: 1rem;
-  width: 35px;
-  height: 35px;
-  opacity: 0.5;
+a {
   color: var(--text-colour);
-
-  background: none;
-  border: 2px solid var(--text-colour);
-  border-radius: 0.4rem;
-  transition: all 0.2s;
 }
-
-#nav-toggle-close:hover {
-  opacity: 1;
-  cursor: pointer;
-}
-
-#menu {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-}
-
-#menu li {
-  width: 200px;
-}
-
-#menu li a {
-  text-decoration: none;
-  display: block;
-  color: var(--text-colour);
-  padding: 1rem;
-  text-align: left;
-  transition: all 0.2s;
-}
-
-#menu li a:hover {
-  background-color: var(--text-colour);
-  color: var(--bg-dark);
-}
-
 /* ---------------------core layout - stack--------------------- */
 /* background panels */
 .stack-xl {
@@ -149,6 +57,7 @@ body {
   margin-top: 5rem;
   position: relative;
   overflow: hidden;
+  margin-bottom: 5%;
 }
 
 /* right-aligned dark text boxes */
@@ -165,7 +74,7 @@ body {
   border-style: solid;
   border-color: var(--text-colour);
   border-width: 1px;
-  width: 40%;
+  width: 30rem;
   height: 90%;
 }
 
@@ -185,11 +94,11 @@ body {
 footer {
   background-color: var(--accent-colour);
   height: 10%;
+  padding: 1rem;
 }
 
 .img-bg img {
   object-fit: contain;
-  position: absolute;
   opacity: 0.6;
   max-height: 100%;
   z-index: 0;
@@ -198,9 +107,9 @@ footer {
 /* ---------------------text elements--------------------- */
 .heading {
   color: var(--heading-colour);
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: var(--heading-font);
   opacity: 1;
-  margin-left: 10%;
+  margin: auto;
   margin-top: 3%;
 }
 
@@ -216,15 +125,15 @@ h2 {
 }
 
 p {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--p-font);
   color: var(--text-colour);
   font-size: small;
 }
 
 .footer-text {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: x-small;
-  color: var(--bg-dark);
+  font-family: var(--p-font);
+  font-size: small;
+  color: var(--text-colour);
   margin-top: 1rem;
   margin-left: 1rem;
 }
@@ -237,9 +146,16 @@ p {
 
 /* ---------------------carousel--------------------- */
 
-.carousel {
-  width: 100%;
+.carousel-img {
   position: relative;
+  margin: auto;
+  align-self: center;
+}
+
+.carousel {
+  width: 50%;
+  position: relative;
+  display: flex;
 }
 
 .slide {
@@ -248,6 +164,8 @@ p {
   opacity: 0;
   transition: 200ms opacity ease-in-out;
   transition-delay: 200ms;
+  align-items: center;
+  justify-items: center;
 }
 
 .slide > img {
@@ -256,7 +174,6 @@ p {
 }
 
 .slide[data-active] {
-  /* .slide.active-slide { */
   opacity: 1;
   transition-delay: 0;
   z-index: 1;

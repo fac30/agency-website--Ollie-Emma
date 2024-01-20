@@ -11,15 +11,14 @@
       href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="colours.css" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="nav.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
     <!-- Navigation Menu Toggle Button -->
     <button id="nav-toggle" onclick="toggleNav()">
-      <img src="/assets/menu-svgrepo-com.svg" />
     </button>
     <!-- Navigation Menu -->
     <nav class="navbar" id="navbar">
@@ -34,8 +33,8 @@
 
     <!-- Welcome -->
     <main id="main">
-      <section class="stack-xl bg-1">
-        <h1 class="heading" id="main-title">HauntedHomes</h1>
+      <section class="stack-xl bg-1 flex-col">
+        <h1 class="heading" id="main-title">HauntedHomes</h1>          
         <div class="stack-lg img-bg flex-col">
           <img src="/assets/ghost-property-main.png" />
         </div>
@@ -45,7 +44,7 @@
         <h2 class="heading">Who we are</h2>
         <div class="stack-lg flex-row">
           <div class="stack-sm flex-col">
-            <img class="member-img" src="corinne-kutz-image.jpg" />
+            <img class="member-img" src="assets\agent-1.png" />
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -57,7 +56,7 @@
             </p>
           </div>
           <div class="stack-sm">
-            <img class="member-img" src="corinne-kutz-image.jpg" />
+            <img class="member-img" src="assets\agent-2.png" />
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -74,24 +73,20 @@
       <section class="stack-xl bg-1" id="available-homes">
         <h2 class="heading">Available homes</h2>
         <div class="stack-lg carousel" data-carousel>
-          <button class="carousel-button prev" data-carousel-button="prev">
-            <
-          </button>
-          <button class="carousel-button next" data-carousel-button="next">
-            >
-          </button>
+          <button class="carousel-button prev" data-carousel-button="prev">&#x2039;</button>
+          <button class="carousel-button next"data-carousel-button="next">&#8250;</button>
           <ul data-slides>
             <li class="slide" data-active="true">
-              <img src="/assets/ghost-prop-1.png" />
+              <img class="carousel-img" src="/assets/ghost-prop-1.png" />
             </li>
             <li class="slide">
-              <img src="/assets/ghost-prop-2.png" />
+              <img class="carousel-img" src="/assets/ghost-prop-2.png" />
             </li>
             <li class="slide">
-              <img src="/assets/ghost-prop-3.png" />
+              <img class="carousel-img" src="/assets/ghost-prop-3.png" />
             </li>
             <li class="slide">
-              <img src="/assets/ghost-prop-4.png" />
+              <img class="carousel-img" src="/assets/ghost-prop-4.png" />
             </li>
           </ul>
         </div>
@@ -139,9 +134,9 @@
     <!-- Footer -->
     <footer>
       <div class="footer-content flex-col">
-        <div class="footer-text">Footer text here</div>
-        <div class="footer-text">Lorem ipsum dolor sit amet</div>
-        <div class="footer-text">Consectetur adipiscing elit</div>
+        <div class="footer-text">&copy HauntedHomes, 2024</div>
+        <div class="footer-text">Images generated in Dall-e</div>
+        <div class="footer-text">Gif by Ankita via <a href="https://giphy.com/gifs/dance-3d-skeleton-LrEuHhGTir0gtU0jVH" target="new">Giphy</a></div>
       </div>
     </footer>
   </body>
