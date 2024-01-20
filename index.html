@@ -18,11 +18,11 @@
   </head>
   <body>
     <!-- Navigation Menu Toggle Button -->
-    <button id="nav-toggle" onclick="toggleNav()">
+    <button id="nav-toggle" aria-label="Open navigation bar" onclick="toggleNav()">
     </button>
     <!-- Navigation Menu -->
     <nav class="navbar" id="navbar">
-      <button id="nav-toggle-close" onclick="toggleNav()">X</button>
+      <button id="nav-toggle-close" aria-label="Close navigation bar" onclick="toggleNav()">X</button>
       <ul id="menu">
         <li><a href="#main">Welcome</a></li>
         <li><a href="#who-we-are">Who we are</a></li>
@@ -73,8 +73,8 @@
       <section class="stack-xl bg-1" id="available-homes" tabindex="0">
         <h2 class="heading">Available homes</h2>
         <div class="stack-lg carousel" data-carousel>
-          <button class="carousel-button prev" data-carousel-button="prev">&#x2039;</button>
-          <button class="carousel-button next"data-carousel-button="next">&#8250;</button>
+          <button class="carousel-button prev" data-carousel-button="prev" aria-label="Previous image">&#x2039;</button>
+          <button class="carousel-button next"data-carousel-button="next" aria-label="Next image">&#8250;</button>
           <ul data-slides>
             <li class="slide" data-active="true">
               <img class="carousel-img" src="/assets/ghost-prop-1.png" alt="A white ghost in front of a Victorian terraced home at dusk." />
