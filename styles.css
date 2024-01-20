@@ -148,6 +148,7 @@ body {
   margin-top: 5rem;
   position: relative;
   overflow: hidden;
+  margin-bottom: 5%;
 }
 
 /* right-aligned dark text boxes */
@@ -164,7 +165,7 @@ body {
   border-style: solid;
   border-color: var(--text-colour);
   border-width: 1px;
-  width: 40%;
+  width: 30rem;
   height: 90%;
 }
 
