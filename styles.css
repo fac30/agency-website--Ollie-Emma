@@ -51,12 +51,13 @@ a {
 }
 /* centred content boxes on each pane */
 .stack-lg {
-  width: 70%;
+  width: 90%;
+  max-width: 60rem;
   height: 70%;
   margin: auto;
   margin-top: 5rem;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-bottom: 5%;
 }
 
@@ -67,15 +68,6 @@ a {
   align-self: flex-end;
   padding: 1rem;
   z-index: 1;
-}
-
-/* smaller text boxes for info */
-.stack-sm {
-  border-style: solid;
-  border-color: var(--text-colour);
-  border-width: 1px;
-  width: 30rem;
-  height: 90%;
 }
 
 .footer-content {
@@ -110,8 +102,8 @@ footer {
   font-family: var(--heading-font);
 
   margin: auto;
-  /* margin-top: 5%;
-  max-width: 100%;
+  margin-top: 5%;
+  /* max-width: 100%;
   font-size: calc(3rem + 1vw); */
 }
 
@@ -140,18 +132,16 @@ p {
   margin-left: 1rem;
 }
 
-/* ---------------------images--------------------- */
-.member-img {
-  width: 100%;
-  height: width;
-}
-
 /* ---------------------carousel--------------------- */
 
 .carousel-img {
   position: relative;
   margin: auto;
   align-self: center;
+  object-fit: cover;
+  object-position: top center;
+  width: 100%;
+  height: 100%;
 }
 
 .carousel {
@@ -264,3 +254,5 @@ p {
 #main-text {
   padding: 1rem;
 }
+
+/* ----------- who we are ------------- */
