@@ -1,11 +1,11 @@
 /* --------------------- key variables --------------------- */
 :root {
   --bg-dark: #140a0b;
-  --bg-light: #7C3E0E;
+  --bg-light: #7c3e0e;
   --heading-colour: #86b1c4;
-  --text-colour: #FDEFED;
-  --accent-colour: #6E4D5A;
-  --p-font: monospace; 
+  --text-colour: #fdefed;
+  --accent-colour: #6e4d5a;
+  --p-font: monospace;
   --heading-font: "Creepster", system-ui;
 }
 /* --------------------- core css --------------------- */
@@ -108,9 +108,11 @@ footer {
 .heading {
   color: var(--heading-colour);
   font-family: var(--heading-font);
-  opacity: 1;
+
   margin: auto;
-  margin-top: 3%;
+  /* margin-top: 5%;
+  max-width: 100%;
+  font-size: calc(3rem + 1vw); */
 }
 
 h1 {
@@ -212,4 +214,53 @@ p {
 
 .carousel-button.next {
   right: 1rem;
+}
+
+/* ----------- Welcome ------------- */
+#welcome {
+  background-image: url(assets/ghost-property-main.webp);
+  background-size: cover;
+  background-position: center center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#main-title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  height: 20rem;
+  background: radial-gradient(
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.4),
+    transparent,
+    transparent,
+    transparent,
+    transparent
+  );
+}
+
+#main-title {
+  color: rgb(153, 243, 255);
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+#main-subtitle {
+  font-size: 1.5rem;
+}
+
+#main-text {
+  padding: 1rem;
 }
