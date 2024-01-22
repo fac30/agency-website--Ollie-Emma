@@ -24,11 +24,11 @@
   width: 35px;
   height: 35px;
 
-  border: 2px solid var(--text-colour);
+  border: 2px solid var(--accent-colour);
   border-radius: 0.4rem;
   color: var(--heading-colour);
 
-  opacity: 0.5;
+  opacity: 0.8;
   background-color: var(--bg-dark);
   background: url(assets/menu-svgrepo-com.svg);
   background-repeat: no-repeat;
@@ -45,8 +45,18 @@
 }
 
 #nav-toggle:hover {
-  opacity: 1 !important;
+  opacity: 1;
   cursor: pointer;
+}
+
+/* when nav is open, we always hide the menu button */
+#nav-toggle.open {
+  pointer-events: none;
+  opacity: 0;
+}
+
+#nav-toggle.open:hover {
+  opacity: 0;
 }
 
 /* X inside the nav */
@@ -76,14 +86,15 @@
 }
 
 #menu li {
-  width: 200px;
+  width: 260px;
 }
 
 #menu li a {
+  font-size: large;
   text-decoration: none;
   display: block;
   color: var(--text-colour);
-  padding: 1rem;
+  padding: 2rem;
   text-align: left;
   transition: all 0.2s;
 }
