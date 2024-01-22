@@ -1,12 +1,20 @@
 // ----------------------------------- NAV BAR -----------------------------------------------------
 // toggles the nav bar when invoked. Used by the menu & X buttons
+
 let closedNav = true;
 function toggleNav() {
-  var navbar = document.getElementById("navbar");
-  var menuButton = document.getElementById("nav-toggle");
-  navbar.style.width = closedNav ? "200px" : "0px";
+  const navbar = document.getElementById("navbar");
+  const menuButton = document.getElementById("nav-toggle");
 
-  menuButton.style.opacity = !closedNav ? "0.5" : "0";
+  closedNav = !Array.from(menuButton.classList).includes("open");
+  if (closedNav) {
+    navbar.style.width = "260px";
+    menuButton.classList.add("open");
+  } else {
+    navbar.style.width = "0px";
+    menuButton.classList.remove("open");
+  }
+
   closedNav = !closedNav;
 }
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HauntedHomes</title>
+    <title>HauntedHomes Inc.</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,81 +12,168 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="form.css" />
     <link rel="stylesheet" href="nav.css" />
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="carousel.css" />
+    <link rel="stylesheet" href="form.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
     <!-- Navigation Menu Toggle Button -->
-    <button id="nav-toggle" aria-label="Open navigation bar" onclick="toggleNav()">
-    </button>
+    <button
+      id="nav-toggle"
+      aria-label="Open navigation bar"
+      onclick="toggleNav()"
+    ></button>
     <!-- Navigation Menu -->
     <nav class="navbar" id="navbar">
-      <button id="nav-toggle-close" aria-label="Close navigation bar" onclick="toggleNav()">X</button>
+      <button
+        id="nav-toggle-close"
+        aria-label="Close navigation bar"
+        onclick="toggleNav()"
+      >
+        X
+      </button>
       <ul id="menu">
-        <li><a href="#main">Welcome</a></li>
+        <li>
+          <a href="#main"><b>Welcome 👻</b></a>
+        </li>
         <li><a href="#who-we-are">Who we are</a></li>
         <li><a href="#available-homes">Available homes</a></li>
         <li><a href="#contact">Get in touch</a></li>
       </ul>
     </nav>
 
-    <!-- Welcome -->
     <main id="main">
-      <section class="stack-xl bg-1 flex-col" tabindex="0">
-        <h1 class="heading" id="main-title">HauntedHomes</h1>          
-        <div class="stack-lg img-bg flex-col">
-          <img src="/assets/ghost-property-main.webp" alt="A grainy, black and white image of an old, large home."/>
+      <!-- Welcome -->
+      <section class="stack-xl bg-1 flex-col" id="welcome" tabindex="0">
+        <div id="main-title-container">
+          <h1 class="heading" id="main-title">
+            <span>Haunted</span><span>Homes</span>
+          </h1>
+          <p id="main-subtitle">* estate agency *</p>
         </div>
+        <p id="main-text">Your Premier Haunted House Specialists</p>
       </section>
       <!-- Who we are -->
-      <section class="stack-xl bg-2" id="who-we-are" tabindex="0">
-        <h2 class="heading">Who we are</h2>
-        <div class="stack-lg flex-row">
-          <div class="stack-sm flex-col">
-            <img class="member-img" src="assets\agent-1.webp" alt="A ghost wearing a dark purple suit, in front of a grey background."/>
+      <section id="who-we-are" class="stack-xl" tabindex="0">
+        <h2 class="heading">Wooo we are</h2>
+        <p>
+          Here at Haunted Homes Inc. we don't just sell houses; we sell
+          experiences that last an <b>eternity</b>. Each of our listings is as
+          unique as the spirits that roam its halls. From Victorian manors with
+          playful poltergeists to cozy cottages housing centuries-old specters,
+          our portfolio is as diverse as the afterlife itself.
+        </p>
+        <div id="members-container">
+          <div class="member">
+            <div class="member-img">
+              <img
+                src="assets\agent-1.webp"
+                alt="A ghost wearing a dark purple suit, in front of a grey background."
+              />
+            </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              <b>Evelyn Whisperwood: </b> the lady of a grand Victorian estate,
+              Evelyn now lends her expertise in 19th-century architecture and
+              spirit communication to help clients find charming haunted homes.
+              Renowned for her graceful negotiations with shy spirits, she
+              ensures a peaceful coexistence between the living and the
+              ethereal.
             </p>
           </div>
-          <div class="stack-sm">
-            <img class="member-img" src="assets\agent-2.webp" alt="A ghost with a pointy head, purple and orange cheeks, dark moustache and white beard, in front of a grey background."/>
+          <div class="member">
+            <div class="member-img">
+              <img
+                src="assets\agent-2.webp"
+                alt="A ghost with a pointy head, purple and orange cheeks, dark moustache and white beard, in front of a grey background."
+              />
+            </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              <b>Jasper Grimshaw: </b> A former Edwardian magician turned real
+              estate agent, Jasper specializes in homes with hidden passages and
+              mysterious histories. His flair for the dramatic and knack for
+              unveiling the unseen makes him the go-to for those seeking a home
+              with a touch of magical intrigue and playful hauntings.
             </p>
           </div>
         </div>
       </section>
+
       <!-- Available homes -->
       <section class="stack-xl bg-1" id="available-homes" tabindex="0">
         <h2 class="heading">Available homes</h2>
         <div class="stack-lg carousel" data-carousel>
-          <button class="carousel-button prev" data-carousel-button="prev" aria-label="Previous image">&#x2039;</button>
-          <button class="carousel-button next"data-carousel-button="next" aria-label="Next image">&#8250;</button>
+          <button
+            class="carousel-button prev"
+            data-carousel-button="prev"
+            aria-label="Previous image"
+          >
+            &#x2039;
+          </button>
+          <button
+            class="carousel-button next"
+            data-carousel-button="next"
+            aria-label="Next image"
+          >
+            &#8250;
+          </button>
           <ul data-slides>
             <li class="slide" data-active="true">
-              <img class="carousel-img" src="/assets/ghost-prop-1.webp" alt="A white ghost in front of a Victorian terraced home at dusk." />
+              <img
+                class="carousel-img"
+                src="/assets/ghost-prop-1.webp"
+                alt="A white ghost in front of a Victorian terraced home at dusk."
+              />
+              <p>
+                <b>Glimmergrove Loft: </b> In the heart of the city, this
+                spacious loft boasts an urban chic design with a twist of the
+                mystical. At twilight, mysterious flickering lights, attributed
+                to a friendly spirit, add a magical touch to the panoramic city
+                views.
+              </p>
             </li>
             <li class="slide">
-              <img class="carousel-img" src="/assets/ghost-prop-2.webp" alt="A faint white ghost in front of an Edwardian terraced home, in front of a lavender sky."/>
+              <img
+                class="carousel-img"
+                src="/assets/ghost-prop-2.webp"
+                alt="A faint white ghost in front of an Edwardian terraced home, in front of a lavender sky."
+              />
+              <p>
+                <b>Everglade Townhouse: </b> This lakeside townhouse, with its
+                serene views and peaceful atmosphere, is watched over by a
+                guardian spirit. It combines the comfort of modern living with a
+                touch of nature, featuring warm interiors and a delightful view
+                of the nearby lake.
+              </p>
             </li>
             <li class="slide">
-              <img class="carousel-img" src="/assets/ghost-prop-3.webp" alt="A blurry ghost in the bay window of a brick house."/>
+              <img
+                class="carousel-img"
+                src="/assets/ghost-prop-3.webp"
+                alt="A blurry ghost in the bay window of a brick house."
+              />
+              <p>
+                <b>Spectral Springs Apartment: </b> This bright, airy apartment
+                in a lively neighborhood is home to a playful spectral ghost,
+                adding a unique charm. With its contemporary design and a small,
+                enchanting back garden, it's a cozy haven amidst the city's
+                hustle.
+              </p>
             </li>
             <li class="slide">
-              <img class="carousel-img" src="/assets/ghost-prop-4.webp" alt="A blurry, humanoid ghost in the window of a modern apartment building."/>
+              <img
+                class="carousel-img"
+                src="/assets/ghost-prop-4.webp"
+                alt="A blurry, humanoid ghost in the window of a modern apartment building."
+              />
+              <p>
+                <b>Mystic Meadows Flats: </b> In this charming block of flats,
+                nestled within a bustling cityscape, resides a gentle spirit
+                known for its soothing presence. The modern interior, combined
+                with whimsical touches and a cozy balcony overlooking the
+                meadows, offers a serene escape from urban life.
+              </p>
             </li>
           </ul>
         </div>
@@ -123,7 +210,20 @@
         </div>
         <div id="success-container">
           <h2>Excellent!</h2>
-          <video src="assets\skeleton-gif.webm" autoplay  loop></video>
+          <iframe
+            src="https://giphy.com/embed/LrEuHhGTir0gtU0jVH"
+            width="200"
+            height="200"
+            frameborder="0"
+            class="giphy-embed"
+            allowfullscreen
+          ></iframe>
+          <p aria-labelledby="A gif of a dancing skeleton.">
+            <a
+              href="https://giphy.com/gifs/dance-3d-skeleton-LrEuHhGTir0gtU0jVH"
+              >via GIPHY</a
+            >
+          </p>
           <!-- <img src="assets\skeleton-gif.webm" alt="A gif of a dancing skeleton."/> -->
           <h3>
             ...a member of our team will <span>FIND YOU</span> shortly to assist
@@ -137,7 +237,14 @@
       <div class="footer-content flex-col">
         <div class="footer-text">&copy HauntedHomes, 2024</div>
         <div class="footer-text">Images generated in Dall-e</div>
-        <div class="footer-text">Gif by Ankita via <a href="https://giphy.com/gifs/dance-3d-skeleton-LrEuHhGTir0gtU0jVH" target="new">Giphy</a></div>
+        <div class="footer-text">
+          Gif by Ankita via
+          <a
+            href="https://giphy.com/gifs/dance-3d-skeleton-LrEuHhGTir0gtU0jVH"
+            target="new"
+            >Giphy</a
+          >
+        </div>
       </div>
     </footer>
   </body>

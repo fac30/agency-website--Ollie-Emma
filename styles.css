@@ -1,11 +1,11 @@
 /* --------------------- key variables --------------------- */
 :root {
   --bg-dark: #140a0b;
-  --bg-light: #7C3E0E;
+  --bg-light: #7c3e0e;
   --heading-colour: #86b1c4;
-  --text-colour: #FDEFED;
-  --accent-colour: #6E4D5A;
-  --p-font: monospace; 
+  --text-colour: #fdefed;
+  --accent-colour: #6e4d5a;
+  --p-font: monospace;
   --heading-font: "Creepster", system-ui;
 }
 /* --------------------- core css --------------------- */
@@ -38,6 +38,8 @@ a {
 .stack-xl {
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .flex-col {
@@ -51,12 +53,13 @@ a {
 }
 /* centred content boxes on each pane */
 .stack-lg {
-  width: 70%;
-  height: 70%;
+  width: 90%;
+  max-width: 40rem;
+  flex: 1;
   margin: auto;
   margin-top: 5rem;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-bottom: 5%;
 }
 
@@ -69,18 +72,19 @@ a {
   z-index: 1;
 }
 
-/* smaller text boxes for info */
-.stack-sm {
-  border-style: solid;
-  border-color: var(--text-colour);
-  border-width: 1px;
-  width: 30rem;
-  height: 90%;
-}
-
 .footer-content {
   height: 5rem;
   padding-bottom: 1rem;
+}
+
+.divider {
+  text-align: center;
+  width: 100%;
+  max-height: 10rem;
+}
+.divider img {
+  height: 100%;
+  width: 100%;
 }
 /* ---------------------background colours--------------------- */
 .bg-1 {
@@ -108,9 +112,11 @@ footer {
 .heading {
   color: var(--heading-colour);
   font-family: var(--heading-font);
-  opacity: 1;
+
   margin: auto;
-  margin-top: 3%;
+  margin-top: 5%;
+  /* max-width: 100%;
+  font-size: calc(3rem + 1vw); */
 }
 
 h1 {
@@ -138,22 +144,69 @@ p {
   margin-left: 1rem;
 }
 
-/* ---------------------images--------------------- */
-.member-img {
-  width: 100%;
-  height: width;
+/* ----------- Welcome ------------- */
+#welcome {
+  background-image: url(assets/ghost-property-main.webp);
+  background-size: cover;
+  background-position: center center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-/* ---------------------carousel--------------------- */
+#main-title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  height: 20rem;
+  background: radial-gradient(
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.4),
+    transparent,
+    transparent,
+    transparent,
+    transparent
+  );
+}
 
+#main-title {
+  color: rgb(153, 243, 255);
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+#main-subtitle {
+  font-size: 1.5rem;
+}
+
+#main-text {
+  padding: 1rem;
+}
+
+/* ---------------- Carousel  ----------------- */
 .carousel-img {
   position: relative;
   margin: auto;
   align-self: center;
+  object-fit: cover;
+  object-position: top center;
+  width: 100%;
+  height: 100%;
 }
 
 .carousel {
-  width: 50%;
+  width: 40rem;
+  max-width: 90%;
   position: relative;
   display: flex;
 }
@@ -169,8 +222,21 @@ p {
 }
 
 .slide > img {
+  position: absolute;
   display: block;
   object-fit: cover;
+}
+
+.slide p {
+  position: absolute;
+  top: 0;
+  padding: 1rem;
+  color: #140a0b;
+  background-color: rgb(180, 180, 180, 0.4);
+}
+
+.slide p b {
+  color: pink;
 }
 
 .slide[data-active] {
@@ -189,7 +255,7 @@ p {
   transform: translateY(-50%);
   color: var(--bg-light);
   opacity: 0.7;
-  padding: 0 0.5 rem;
+  padding: 0 0.5rem;
   background-color: grey;
 }
 
