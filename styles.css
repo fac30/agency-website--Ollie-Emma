@@ -217,8 +217,6 @@ p {
   opacity: 0;
   transition: 200ms opacity ease-in-out;
   transition-delay: 200ms;
-  align-items: center;
-  justify-items: center;
 }
 
 .slide > img {
@@ -228,15 +226,18 @@ p {
 }
 
 .slide p {
-  position: absolute;
+  position: relative;
   top: 0;
   padding: 1rem;
   color: #140a0b;
-  background-color: rgb(180, 180, 180, 0.4);
+  background-color: rgba(203, 203, 203, 0.7);
+  width: 80%;
+  margin: auto;
+  margin-top: 10%;
 }
 
 .slide p b {
-  color: pink;
+  color: var(--bg-light);
 }
 
 .slide[data-active] {
@@ -278,4 +279,8 @@ p {
 
 .carousel-button.next {
   right: 1rem;
+}
+
+.slide-text {
+  width: 40%;
 }

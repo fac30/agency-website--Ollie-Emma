@@ -6,9 +6,12 @@ function toggleNav() {
   const navbar = document.getElementById("navbar");
   const menuButton = document.getElementById("nav-toggle");
 
-  closedNav = !Array.from(menuButton.classList).includes("open");
   if (closedNav) {
-    navbar.style.width = "260px";
+    if (window.innerWidth < 600) {
+      navbar.style.width = "100%";
+    } else {
+      navbar.style.width = "260px";
+    }
     menuButton.classList.add("open");
   } else {
     navbar.style.width = "0px";
