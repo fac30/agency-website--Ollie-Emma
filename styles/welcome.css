@@ -1,0 +1,49 @@
+#welcome {
+  align-items: center;
+  overflow: hidden;
+
+  background-image: url(../assets/ghost-property-main.webp);
+  background-size: cover;
+  background-position: center center;
+  background-color: var(--bg-dark);
+  justify-content: center;
+}
+
+#main-title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  height: 20rem;
+  background: radial-gradient(
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.4),
+    transparent,
+    transparent,
+    transparent,
+    transparent
+  );
+}
+
+#main-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+  color: rgb(153, 243, 255);
+  text-align: center;
+}
+
+#main-subtitle {
+  font-size: 1.5rem;
+}
+
+#main-text {
+  padding: 1rem;
+  font-size: 1rem;
+}
