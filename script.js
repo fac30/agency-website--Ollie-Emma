@@ -1,22 +1,38 @@
+const navbar = document.getElementById("navbar");
+const menuButton = document.getElementById("nav-toggle");
+const form = document.getElementById("contact-form");
+
 // ----------------------------------- NAV BAR -----------------------------------------------------
+
 // toggles the nav bar when invoked. Used by the menu & X buttons
+// override is optional
+function toggleNav(override) {
+  const navClasses = Array.from(navbar.classList);
+  const menuButtonClasses = Array.from(navbar.classList);
 
-let closedNav = true;
-function toggleNav() {
-  const navbar = document.getElementById("navbar");
-  const menuButton = document.getElementById("nav-toggle");
+  let closedNav =
+    !navClasses.includes("open") && !menuButtonClasses.includes("open");
 
-  closedNav = !Array.from(menuButton.classList).includes("open");
-  if (closedNav) {
-    navbar.style.width = "260px";
-    menuButton.classList.add("open");
-  } else {
-    navbar.style.width = "0px";
-    menuButton.classList.remove("open");
+  if (override !== undefined) {
+    closedNav = override;
   }
 
-  closedNav = !closedNav;
+  if (closedNav) {
+    navbar.classList.add("open");
+    menuButton.classList.add("open");
+  } else {
+    navbar.classList.remove("open");
+    menuButton.classList.remove("open");
+  }
 }
+
+document.querySelectorAll("#menu li a").forEach((el) => {
+  el.addEventListener("click", toggleNav);
+});
+
+document
+  .getElementById("main")
+  .addEventListener("click", () => toggleNav(false));
 
 // ----------------------------------- CAROUSEL -----------------------------------------------------
 const carouselButtons = document.querySelectorAll("[data-carousel-button]");
@@ -43,12 +59,10 @@ carouselButtons.forEach((button) => {
 // ----------------------------------- FORM -----------------------------------------------------
 // we show the element underneath when the user submits
 
-const form = document.getElementById("contact-form");
-document.getElementById("main").addEventListener("click", () => {
-  if (!closedNav) {
-    toggleNav();
-  }
-});
+// shows red borders around the invalid fields when the user clicks submit.
+function onFormTrySubmit() {
+  form.classList.add("form-submitted");
+}
 
 function onFormSubmit(event) {
   event.preventDefault();
@@ -57,15 +71,11 @@ function onFormSubmit(event) {
     document.getElementById("form-container").style.display = "none";
     document.getElementById("success-container").style.display = "block";
 
+    // scroll to it
     const { offsetLeft, offsetTop } =
       document.getElementById("success-container");
     window.scrollTo(offsetLeft, offsetTop);
   }, 500);
-}
-
-// shows red borders around the invalid fields when the user clicks submit.
-function onFormTrySubmit(event) {
-  form.classList.add("form-submitted");
 }
 
 // generates a new background colors for the success-container
@@ -76,12 +86,12 @@ function generateColours() {
     Math.floor(Math.random() * 255),
   ];
 
-  return `rgb${colours.join(",")}`;
+  return `rgb(${colours.join(",")})`;
 }
 
+// changes the colour of the success page header and background every 3 seconds
 function party() {
   const successContainer = document.getElementById("success-container");
-
   const texts = document.getElementsByClassName("invert");
 
   setInterval(() => {
