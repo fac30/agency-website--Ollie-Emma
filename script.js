@@ -40,21 +40,56 @@ carouselButtons.forEach((button) => {
   });
 });
 
+// ----------------------------------- FORM -----------------------------------------------------
+// we show the element underneath when the user submits
+
 const form = document.getElementById("contact-form");
 document.getElementById("main").addEventListener("click", () => {
   if (!closedNav) {
     toggleNav();
   }
 });
-// ----------------------------------- FORM -----------------------------------------------------
-// we show the element underneath when the user submits
+
 function onFormSubmit(event) {
   event.preventDefault();
-  document.getElementById("form-container").style.display = "none";
-  document.getElementById("success-container").style.display = "block";
+  setTimeout(() => {
+    party();
+    document.getElementById("form-container").style.display = "none";
+    document.getElementById("success-container").style.display = "block";
+
+    const { offsetLeft, offsetTop } =
+      document.getElementById("success-container");
+    window.scrollTo(offsetLeft, offsetTop);
+  }, 500);
 }
 
 // shows red borders around the invalid fields when the user clicks submit.
 function onFormTrySubmit(event) {
   form.classList.add("form-submitted");
+}
+
+// generates a new background colors for the success-container
+function generateColours() {
+  const colours = [
+    Math.floor(Math.random() * 255),
+    Math.floor(Math.random() * 255),
+    Math.floor(Math.random() * 255),
+  ];
+
+  return `rgb${colours.join(",")}`;
+}
+
+function party() {
+  const successContainer = document.getElementById("success-container");
+
+  const texts = document.getElementsByClassName("invert");
+
+  setInterval(() => {
+    const colour = generateColours();
+    successContainer.style.backgroundColor = colour;
+
+    for (const txt of texts) {
+      txt.style.color = colour;
+    }
+  }, 2000);
 }

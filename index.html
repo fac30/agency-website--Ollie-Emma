@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="nav.css" />
     <link rel="stylesheet" href="about.css" />
-    <link rel="stylesheet" href="carousel.css" />
     <link rel="stylesheet" href="form.css" />
     <script src="script.js" defer></script>
   </head>
@@ -24,7 +23,9 @@
       id="nav-toggle"
       aria-label="Open navigation bar"
       onclick="toggleNav()"
-    ></button>
+    >
+      <img src="assets/menu-svgrepo-com.svg" alt="menu icon" />
+    </button>
     <!-- Navigation Menu -->
     <nav class="navbar" id="navbar">
       <button
@@ -209,7 +210,7 @@
           </form>
         </div>
         <div id="success-container">
-          <h2>Excellent!</h2>
+          <h2 class="invert">Excellent!</h2>
           <iframe
             src="https://giphy.com/embed/LrEuHhGTir0gtU0jVH"
             width="200"
@@ -225,7 +226,7 @@
             >
           </p>
           <!-- <img src="assets\skeleton-gif.webm" alt="A gif of a dancing skeleton."/> -->
-          <h3>
+          <h3 class="invert">
             ...a member of our team will <span>FIND YOU</span> shortly to assist
             with your home search.<br />
           </h3>
