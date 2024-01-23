@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   background-color: pink;
+  height: 85vh;
 }
 
 form {
@@ -91,13 +92,14 @@ textarea {
   width: 100%;
   padding: 2rem;
   color: var(--heading-colour);
-  background-color: var(--bg-light);
+  background-color: var(--bg-success);
   align-items: center;
   gap: 10px;
   font-family: var(--p-font);
   font-family: "Creepster", system-ui;
   font-weight: 400;
   font-style: normal;
+  transition: all 3s;
 }
 
 .contact-us-heading {
@@ -120,4 +122,9 @@ textarea {
 
 .form-head {
   color: var(--bg-light);
+}
+
+.invert {
+  transition: all 3s;
+  filter: invert(100%);
 }
