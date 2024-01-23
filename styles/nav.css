@@ -4,15 +4,15 @@
   left: 0;
   width: 0px;
   height: 100vh;
-
-  overflow: hidden;
   text-align: right;
 
   background-color: var(--accent-colour);
   opacity: 0.8;
 
-  transition: all 0.2s;
+  transition: all 0.4s;
   z-index: 10;
+
+  overflow: hidden;
 }
 
 #navbar.open {
@@ -113,7 +113,7 @@
   }
 
   #menu li {
-    width: 100%;
+    width: 100vw;
   }
 
   #menu li a {
