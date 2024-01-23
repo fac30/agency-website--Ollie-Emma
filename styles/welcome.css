@@ -14,13 +14,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5rem;
+  padding: 7rem;
   height: 20rem;
   background: radial-gradient(
     rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 0.9),
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.6),
     transparent,
     transparent,
     transparent,
@@ -35,7 +35,7 @@
   align-items: center;
   margin: 0;
 
-  color: rgb(153, 243, 255);
+  color: var(--heading-colour);
   text-align: center;
 }
 
@@ -44,6 +44,18 @@
 }
 
 #main-text {
-  padding: 1rem;
+  padding: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
   font-size: 1rem;
+  background: radial-gradient(
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.6),
+    transparent,
+    transparent,
+    transparent,
+    transparent
+  );
 }
