@@ -11,10 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="nav.css" />
-    <link rel="stylesheet" href="about.css" />
-    <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="styles/core.css" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/welcome.css" />
+    <link rel="stylesheet" href="styles/about.css" />
+    <link rel="stylesheet" href="styles/form.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -47,7 +48,7 @@
 
     <main id="main">
       <!-- Welcome -->
-      <section class="stack-xl bg-1 flex-col" id="welcome" tabindex="0">
+      <section class="stack-xl" id="welcome" tabindex="0">
         <div id="main-title-container">
           <h1 class="heading" id="main-title">
             <span>Haunted</span><span>Homes</span>
@@ -102,7 +103,7 @@
       </section>
 
       <!-- Available homes -->
-      <section class="stack-xl bg-1" id="available-homes" tabindex="0">
+      <section id="available-homes" class="stack-xl" tabindex="0">
         <h2 class="heading">Available homes</h2>
         <div class="stack-lg carousel" data-carousel>
           <button
@@ -180,12 +181,9 @@
         </div>
       </section>
       <!-- Contact -->
-      <section class="stack-xl bg-2" id="contact" tabindex="0">
-        <div id="form-container" class="form-box">
-          <h2 class="heading form-head">Make contact with us</h2>
-          <br />
-          <br />
-          <br />
+      <section id="contact" class="stack-xl" tabindex="0">
+        <div id="form-container">
+          <h2 class="heading form-heading">Make contact with us</h2>
           <form id="contact-form" onsubmit="onFormSubmit(event)">
             <input type="text" name="name" placeholder="Name *" required />
             <input
@@ -225,7 +223,6 @@
               >via GIPHY</a
             >
           </p>
-          <!-- <img src="assets\skeleton-gif.webm" alt="A gif of a dancing skeleton."/> -->
           <h3 class="invert">
             ...a member of our team will <span>FIND YOU</span> shortly to assist
             with your home search.<br />
@@ -235,7 +232,7 @@
     </main>
     <!-- Footer -->
     <footer>
-      <div class="footer-content flex-col">
+      <div class="footer-content">
         <div class="footer-text">&copy HauntedHomes, 2024</div>
         <div class="footer-text">Images generated in Dall-e</div>
         <div class="footer-text">

@@ -7,10 +7,13 @@
   --heading-colour: #86b1c4;
   --text-colour: #fdefed;
   --accent-colour: #6e4d5a;
+  --form-invalid: #d21b1b;
+  --form-evil: red;
+
   --p-font: monospace;
   --heading-font: "Creepster", system-ui;
 }
-/* --------------------- core css --------------------- */
+/* --------------------- main elements --------------------- */
 
 html,
 body {
@@ -35,7 +38,8 @@ body {
 a {
   color: var(--text-colour);
 }
-/* ---------------------core layout - stack--------------------- */
+
+/* --------------------- core layout - stack--------------------- */
 /* background panels */
 .stack-xl {
   width: 100%;
@@ -44,15 +48,6 @@ a {
   flex-direction: column;
 }
 
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-row {
-  display: flex;
-  justify-content: space-between;
-}
 /* centred content boxes on each pane */
 .stack-lg {
   width: 90%;
@@ -64,19 +59,6 @@ a {
   margin-bottom: 5%;
 }
 
-/* right-aligned dark text boxes */
-.stack-md {
-  background-color: var(--bg-dark);
-  width: 50%;
-  align-self: flex-end;
-  padding: 1rem;
-  z-index: 1;
-}
-
-.footer-content {
-  padding-bottom: 1rem;
-}
-
 .divider {
   text-align: center;
   width: 100%;
@@ -85,12 +67,6 @@ a {
 .divider img {
   height: 100%;
   width: 100%;
-}
-
-footer {
-  height: 15vh;
-  background-color: var(--accent-colour);
-  padding: 1rem;
 }
 
 .img-bg img {
@@ -126,65 +102,13 @@ p {
   font-size: small;
 }
 
-.footer-text {
-  font-family: var(--p-font);
-  font-size: small;
-  color: var(--text-colour);
-  margin-top: 1rem;
-  margin-left: 1rem;
-}
+/* --------------------------- Available homes ------------------------ */
 
-/* ----------- Welcome ------------- */
-#welcome {
-  background-image: url(assets/ghost-property-main.webp);
-  background-size: cover;
-  background-position: center center;
+#available-homes {
   background-color: var(--bg-dark);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
 }
 
-#main-title-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem;
-  height: 20rem;
-  background: radial-gradient(
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 0.9),
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.4),
-    transparent,
-    transparent,
-    transparent,
-    transparent
-  );
-}
-
-#main-title {
-  color: rgb(153, 243, 255);
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-}
-
-#main-subtitle {
-  font-size: 1.5rem;
-}
-
-#main-text {
-  padding: 1rem;
-  font-size: 1rem;
-}
-
-/* ---------------- Carousel  ----------------- */
+/* ------------------   Carousel  ----------------- */
 .carousel-img {
   position: relative;
   margin: auto;
@@ -269,4 +193,26 @@ p {
 
 .carousel-button.next {
   right: 1rem;
+}
+
+/* ---------------- Footer  ----------------- */
+
+footer {
+  height: 15vh;
+  background-color: var(--accent-colour);
+  padding: 1rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.footer-text {
+  font-family: var(--p-font);
+  font-size: small;
+  color: var(--text-colour);
+  margin-top: 1rem;
+  margin-left: 1rem;
 }
