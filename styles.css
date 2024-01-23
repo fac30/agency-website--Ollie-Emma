@@ -2,6 +2,8 @@
 :root {
   --bg-dark: #140a0b;
   --bg-light: #7c3e0e;
+  --bg-body: rgb(50, 50, 50);
+  --bg-success: #150a01;
   --heading-colour: #86b1c4;
   --text-colour: #fdefed;
   --accent-colour: #6e4d5a;
@@ -26,7 +28,7 @@ html {
 
 body {
   font-family: var(--p-font);
-  background-color: rgb(50, 50, 50);
+  background-color: var(--bg-body);
   text-align: center;
 }
 
@@ -59,7 +61,6 @@ a {
   margin: auto;
   margin-top: 5rem;
   position: relative;
-  /* overflow: hidden; */
   margin-bottom: 5%;
 }
 
@@ -73,7 +74,6 @@ a {
 }
 
 .footer-content {
-  height: 5rem;
   padding-bottom: 1rem;
 }
 
@@ -86,18 +86,10 @@ a {
   height: 100%;
   width: 100%;
 }
-/* ---------------------background colours--------------------- */
-.bg-1 {
-  background-color: var(--bg-dark);
-}
-
-.bg-2 {
-  background-color: var(--bg-light);
-}
 
 footer {
+  height: 15vh;
   background-color: var(--accent-colour);
-  height: 10%;
   padding: 1rem;
 }
 
@@ -115,8 +107,6 @@ footer {
 
   margin: auto;
   margin-top: 5%;
-  /* max-width: 100%;
-  font-size: calc(3rem + 1vw); */
 }
 
 h1 {
@@ -149,7 +139,7 @@ p {
   background-image: url(assets/ghost-property-main.webp);
   background-size: cover;
   background-position: center center;
-
+  background-color: var(--bg-dark);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,13 +151,13 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5rem;
+  padding: 8rem;
   height: 20rem;
   background: radial-gradient(
     rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 1),
     rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.6),
     transparent,
     transparent,
     transparent,
@@ -176,7 +166,7 @@ p {
 }
 
 #main-title {
-  color: rgb(153, 243, 255);
+  color: var(--heading-colour);
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -191,6 +181,19 @@ p {
 
 #main-text {
   padding: 1rem;
+  font-size: 1rem;
+  padding: 2rem;
+  height: 2rem;
+  background: radial-gradient(
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.6),
+    transparent,
+    transparent,
+    transparent,
+    transparent
+  );
 }
 
 /* ---------------- Carousel  ----------------- */
@@ -230,7 +233,7 @@ p {
   top: 0;
   padding: 1rem;
   color: #140a0b;
-  background-color: rgba(203, 203, 203, 0.7);
+  background-color: rgba(239, 233, 233, 0.805);
   width: 80%;
   margin: auto;
   margin-top: 10%;

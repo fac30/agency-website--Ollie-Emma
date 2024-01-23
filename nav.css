@@ -32,10 +32,10 @@
 
   border: 2px solid var(--accent-colour);
   border-radius: 0.4rem;
-  color: var(--heading-colour);
+  background-color: var(--heading-colour);
 
   opacity: 0.8;
-  background: url(assets/menu-svgrepo-com.svg);
+  background-color: var(--bg-dark);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 70% 70%;

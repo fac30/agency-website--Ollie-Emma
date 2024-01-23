@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="nav.css" />
     <link rel="stylesheet" href="about.css" />
-    <link rel="stylesheet" href="carousel.css" />
     <link rel="stylesheet" href="form.css" />
     <script src="script.js" defer></script>
   </head>
@@ -24,7 +23,9 @@
       id="nav-toggle"
       aria-label="Open navigation bar"
       onclick="toggleNav()"
-    ></button>
+    >
+      <img src="assets/menu-svgrepo-com.svg" alt="menu icon" />
+    </button>
     <!-- Navigation Menu -->
     <nav class="navbar" id="navbar">
       <button
@@ -35,12 +36,10 @@
         X
       </button>
       <ul id="menu">
-        <li>
-          <a href="#main"><b>Welcome 👻</b></a>
-        </li>
-        <li><a href="#who-we-are">Who we are</a></li>
-        <li><a href="#available-homes">Available homes</a></li>
-        <li><a href="#contact">Get in touch</a></li>
+        <li><a href="#main" aria-label="Main"><b>Welcome 👻</b></a></li>
+        <li><a href="#who-we-are" aria-label="Who we are">Who we are</a></li>
+        <li><a href="#available-homes" aria-label="Available homes">Available homes</a></li>
+        <li><a href="#contact" aria-label="Contact">Get in touch</a></li>
       </ul>
     </nav>
 
@@ -51,7 +50,7 @@
           <h1 class="heading" id="main-title">
             <span>Haunted</span><span>Homes</span>
           </h1>
-          <p id="main-subtitle">* estate agency *</p>
+          <p id="main-subtitle">estate agency</p>
         </div>
         <p id="main-text">Your Premier Haunted House Specialists</p>
       </section>
@@ -181,7 +180,7 @@
       <!-- Contact -->
       <section class="stack-xl bg-2" id="contact" tabindex="0">
         <div id="form-container" class="form-box">
-          <h2 class="heading form-head">Make contact with us</h2>
+          <h2 class="heading form-head" aria-label="Contact form">Make contact with us</h2>
           <br />
           <br />
           <br />
@@ -209,7 +208,7 @@
           </form>
         </div>
         <div id="success-container">
-          <h2>Excellent!</h2>
+          <h2 class="invert">Excellent!</h2>
           <iframe
             src="https://giphy.com/embed/LrEuHhGTir0gtU0jVH"
             width="200"
@@ -225,7 +224,7 @@
             >
           </p>
           <!-- <img src="assets\skeleton-gif.webm" alt="A gif of a dancing skeleton."/> -->
-          <h3>
+          <h3 class="invert">
             ...a member of our team will <span>FIND YOU</span> shortly to assist
             with your home search.<br />
           </h3>
