@@ -6,18 +6,20 @@ const form = document.getElementById("contact-form");
 
 // toggles the nav bar when invoked. Used by the menu & X buttons
 // override is optional
-function toggleNav(override) {
+function toggleNav(forceOpenClose) {
   const navClasses = Array.from(navbar.classList);
-  const menuButtonClasses = Array.from(navbar.classList);
+  const menuButtonClasses = Array.from(menuButton.classList);
 
-  let closedNav =
-    !navClasses.includes("open") && !menuButtonClasses.includes("open");
+  let shouldNavOpen;
 
-  if (override !== undefined) {
-    closedNav = override;
+  if (forceOpenClose !== undefined) {
+    shouldNavOpen = forceOpenClose;
+  } else {
+    shouldNavOpen =
+      !navClasses.includes("open") && !menuButtonClasses.includes("open");
   }
 
-  if (closedNav) {
+  if (shouldNavOpen) {
     navbar.classList.add("open");
     menuButton.classList.add("open");
   } else {
@@ -27,7 +29,11 @@ function toggleNav(override) {
 }
 
 document.querySelectorAll("#menu li a").forEach((el) => {
-  el.addEventListener("click", toggleNav);
+  el.addEventListener("click", () => {
+    setTimeout(() => {
+      toggleNav(false);
+    }, 200);
+  });
 });
 
 document
