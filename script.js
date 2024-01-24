@@ -1,6 +1,16 @@
 const navbar = document.getElementById("navbar");
 const menuButton = document.getElementById("nav-toggle");
+
 const form = document.getElementById("contact-form");
+
+const liveRegion = document.getElementById("carouselLiveRegion");
+const carouselButtons = document.querySelectorAll("[data-carousel-button]");
+
+const main = document.getElementById("main");
+
+window.onload = function () {
+  document.getElementById("welcome").focus();
+};
 
 // ----------------------------------- NAV BAR -----------------------------------------------------
 
@@ -34,20 +44,37 @@ function toggleNav(forceOpenClose) {
   }
 }
 
+function toggleKeyboardNav(event) {
+  if (event.key === "Enter" || event.key === " ") {
+    setTimeout(() => {
+      toggleNav(true);
+    }, 200);
+  }
+}
+
 document.querySelectorAll("#menu li a").forEach((el) => {
+  // Click event for mouse users
   el.addEventListener("click", () => {
     setTimeout(() => {
       toggleNav(false);
     }, 200);
   });
+
+  // Key event for keyboard users
+  el.addEventListener("keypress", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      setTimeout(() => {
+        toggleNav(false);
+      }, 200);
+    }
+  });
 });
 
-document
-  .getElementById("main")
-  .addEventListener("click", () => toggleNav(false));
+// Click event listener for 'main' to close the nav
+
+main.addEventListener("click", () => toggleNav(false));
 
 // ----------------------------------- CAROUSEL -----------------------------------------------------
-const carouselButtons = document.querySelectorAll("[data-carousel-button]");
 
 carouselButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -63,8 +90,14 @@ carouselButtons.forEach((button) => {
     activeSlide.removeAttribute("data-active");
     activeSlide.classList.remove("active-slide");
 
-    slides.children[newIndex].setAttribute("data-active", "true");
-    slides.children[newIndex].classList.add("active-slide");
+    const newActiveSlide = slides.children[newIndex];
+    newActiveSlide.setAttribute("data-active", "true");
+    newActiveSlide.classList.add("active-slide");
+
+    // Update ARIA live region with the content of the new active slide
+
+    const newSlideDescription = newActiveSlide.querySelector("p").textContent;
+    liveRegion.textContent = newSlideDescription;
   });
 });
 
@@ -87,6 +120,8 @@ function onFormSubmit(event) {
     const { offsetLeft, offsetTop } =
       document.getElementById("success-container");
     window.scrollTo(offsetLeft, offsetTop);
+
+    document.getElementById("success-container").focus();
   }, 500);
 }
 

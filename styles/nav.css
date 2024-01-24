@@ -13,10 +13,13 @@
   z-index: 10;
 
   overflow: hidden;
+  visibility: hidden;
 }
 
 #navbar.open {
   width: 260px;
+  pointer-events: auto;
+  visibility: visible;
 }
 
 /* menu button */
@@ -32,7 +35,7 @@
   background-color: var(--heading-colour);
 
   opacity: 0.8;
-  background-color: var(--bg-dark);
+  background-color: pink;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 70% 70%;
@@ -110,7 +113,6 @@
   #navbar.open {
     width: 100%;
     text-align: center;
-    opacity: 1;
   }
 
   #menu li {
