@@ -41,7 +41,7 @@
       </button>
       <ul id="menu">
         <li>
-          <a href="#welcome" aria-label="Main"><b>Welcome 👻</b></a>
+          <a href="#welcome" aria-label="Welcome"><b>Welcome 👻</b></a>
         </li>
         <li><a href="#who-we-are" aria-label="Who we are">Who we are</a></li>
         <li>
@@ -115,12 +115,16 @@
       <!-- Available homes -->
       <section id="available-homes" class="stack-xl" tabindex="0">
         <h2 class="heading">Available homes</h2>
-        <div class="stack-lg carousel" data-carousel>
+        <div
+          class="stack-lg carousel"
+          data-carousel
+          aria-label="Image carousel"
+        >
           <button
             class="carousel-button prev"
             data-carousel-button="prev"
             tabindex="0"
-            aria-describedby="show previous home"
+            aria-label="show previous home"
           >
             &#x2039;
           </button>
@@ -128,7 +132,7 @@
             class="carousel-button next"
             data-carousel-button="next"
             tabindex="0"
-            aria-describedby="show next home"
+            aria-label="show next home"
           >
             &#8250;
           </button>

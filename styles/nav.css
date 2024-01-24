@@ -32,10 +32,9 @@
 
   border: 2px solid var(--accent-colour);
   border-radius: 0.4rem;
-  background-color: var(--heading-colour);
+  background-color: var(--bg-dark);
 
   opacity: 0.8;
-  background-color: pink;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 70% 70%;
