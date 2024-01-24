@@ -107,23 +107,26 @@
           <button
             class="carousel-button prev"
             data-carousel-button="prev"
-            aria-label="Previous image"
+            aria-hidden="true"
+            tabindex="-1"
           >
             &#x2039;
           </button>
           <button
             class="carousel-button next"
             data-carousel-button="next"
-            aria-label="Next image"
+            aria-hidden="true"
+            tabindex="-1"
           >
             &#8250;
           </button>
           <ul data-slides>
-            <li class="slide" data-active="true">
+            <li class="slide" data-active="true" tabindex="-1">
               <img
                 class="carousel-img"
                 src="/assets/ghost-prop-1.webp"
-                alt="A white ghost in front of a Victorian terraced home at dusk."
+                alt="Image of a white ghost in front of a Victorian terraced home at dusk."
+                aria-label="Home 1"
               />
               <p>
                 <b>Glimmergrove Loft: </b> In the heart of the city, this
@@ -133,11 +136,12 @@
                 views.
               </p>
             </li>
-            <li class="slide">
+            <li class="slide" tabindex="0">
               <img
                 class="carousel-img"
                 src="/assets/ghost-prop-2.webp"
-                alt="A faint white ghost in front of an Edwardian terraced home, in front of a lavender sky."
+                alt="Image of a faint white ghost in front of an Edwardian terraced home, in front of a lavender sky."
+                aria-label="Home 2"
               />
               <p>
                 <b>Everglade Townhouse: </b> This lakeside townhouse, with its
@@ -147,11 +151,12 @@
                 of the nearby lake.
               </p>
             </li>
-            <li class="slide">
+            <li class="slide" tabindex="0">
               <img
                 class="carousel-img"
                 src="/assets/ghost-prop-3.webp"
-                alt="A blurry ghost in the bay window of a brick house."
+                alt="Image of a blurry ghost in the bay window of a brick house."
+                aria-label="Home 3"
               />
               <p>
                 <b>Spectral Springs Apartment: </b> This bright, airy apartment
@@ -161,11 +166,12 @@
                 hustle.
               </p>
             </li>
-            <li class="slide">
+            <li class="slide" tabindex="0">
               <img
                 class="carousel-img"
                 src="/assets/ghost-prop-4.webp"
-                alt="A blurry, humanoid ghost in the window of a modern apartment building."
+                alt="Image of a blurry, humanoid ghost in the window of a modern apartment building."
+                aria-label="Home 4"
               />
               <p>
                 <b>Mystic Meadows Flats: </b> In this charming block of flats,
