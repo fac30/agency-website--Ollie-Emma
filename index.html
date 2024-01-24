@@ -24,11 +24,12 @@
       id="nav-toggle"
       aria-label="Open navigation bar"
       onclick="toggleNav()"
+      aria-expanded="false"
     >
       <img src="assets/menu-svgrepo-com.svg" alt="menu icon" />
     </button>
     <!-- Navigation Menu -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" role="navigation">
       <button
         id="nav-toggle-close"
         aria-label="Close navigation bar"
@@ -37,9 +38,15 @@
         X
       </button>
       <ul id="menu">
-        <li><a href="#main" aria-label="Main"><b>Welcome 👻</b></a></li>
+        <li>
+          <a href="#main" aria-label="Main"><b>Welcome 👻</b></a>
+        </li>
         <li><a href="#who-we-are" aria-label="Who we are">Who we are</a></li>
-        <li><a href="#available-homes" aria-label="Available homes">Available homes</a></li>
+        <li>
+          <a href="#available-homes" aria-label="Available homes"
+            >Available homes</a
+          >
+        </li>
         <li><a href="#contact" aria-label="Contact">Get in touch</a></li>
       </ul>
     </nav>
@@ -187,7 +194,9 @@
       <!-- Contact -->
       <section id="contact" class="stack-xl" tabindex="0">
         <div id="form-container">
-          <h2 class="heading form-heading" aria-label="Contact form">Make contact with us</h2>
+          <h2 class="heading form-heading" aria-label="Contact form">
+            Make contact with us
+          </h2>
           <form id="contact-form" onsubmit="onFormSubmit(event)">
             <input type="text" name="name" placeholder="Name *" required />
             <input

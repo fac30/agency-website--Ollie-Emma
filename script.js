@@ -7,6 +7,8 @@ const form = document.getElementById("contact-form");
 // toggles the nav bar when invoked. Used by the menu & X buttons
 // override is optional
 function toggleNav(forceOpenClose) {
+  const navbar = document.getElementById("navbar");
+  const menuButton = document.getElementById("nav-toggle");
   const navClasses = Array.from(navbar.classList);
   const menuButtonClasses = Array.from(menuButton.classList);
 
@@ -22,9 +24,13 @@ function toggleNav(forceOpenClose) {
   if (shouldNavOpen) {
     navbar.classList.add("open");
     menuButton.classList.add("open");
+    menuButton.setAttribute("aria-label", "Close navigation bar");
+    menuButton.setAttribute("aria-expanded", "true");
   } else {
     navbar.classList.remove("open");
     menuButton.classList.remove("open");
+    menuButton.setAttribute("aria-label", "Open navigation bar");
+    menuButton.setAttribute("aria-expanded", "false");
   }
 }
 
