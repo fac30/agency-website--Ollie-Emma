@@ -37,12 +37,10 @@
         X
       </button>
       <ul id="menu">
-        <li>
-          <a href="#welcome"><b>Welcome 👻</b></a>
-        </li>
-        <li><a href="#who-we-are">Who we are</a></li>
-        <li><a href="#available-homes">Available homes</a></li>
-        <li><a href="#contact">Get in touch</a></li>
+        <li><a href="#main" aria-label="Main"><b>Welcome 👻</b></a></li>
+        <li><a href="#who-we-are" aria-label="Who we are">Who we are</a></li>
+        <li><a href="#available-homes" aria-label="Available homes">Available homes</a></li>
+        <li><a href="#contact" aria-label="Contact">Get in touch</a></li>
       </ul>
     </nav>
 
@@ -53,7 +51,7 @@
           <h1 class="heading" id="main-title">
             <span>Haunted</span><span>Homes</span>
           </h1>
-          <p id="main-subtitle">* estate agency *</p>
+          <p id="main-subtitle">estate agency</p>
         </div>
         <p id="main-text">Your Premier Haunted House Specialists</p>
       </section>
@@ -183,7 +181,7 @@
       <!-- Contact -->
       <section id="contact" class="stack-xl" tabindex="0">
         <div id="form-container">
-          <h2 class="heading form-heading">Make contact with us</h2>
+          <h2 class="heading form-heading" aria-label="Contact form">Make contact with us</h2>
           <form id="contact-form" onsubmit="onFormSubmit(event)">
             <input type="text" name="name" placeholder="Name *" required />
             <input
