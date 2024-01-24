@@ -24,11 +24,14 @@
       id="nav-toggle"
       aria-label="Open navigation bar"
       onclick="toggleNav()"
+      onkeypress="toggleKeyboardNav(event)"
+      aria-expanded="false"
+      tabindex="0"
     >
       <img src="assets/menu-svgrepo-com.svg" alt="menu icon" />
     </button>
     <!-- Navigation Menu -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" role="navigation">
       <button
         id="nav-toggle-close"
         aria-label="Close navigation bar"
@@ -37,9 +40,15 @@
         X
       </button>
       <ul id="menu">
-        <li><a href="#main" aria-label="Main"><b>Welcome 👻</b></a></li>
+        <li>
+          <a href="#welcome" aria-label="Welcome"><b>Welcome 👻</b></a>
+        </li>
         <li><a href="#who-we-are" aria-label="Who we are">Who we are</a></li>
-        <li><a href="#available-homes" aria-label="Available homes">Available homes</a></li>
+        <li>
+          <a href="#available-homes" aria-label="Available homes"
+            >Available homes</a
+          >
+        </li>
         <li><a href="#contact" aria-label="Contact">Get in touch</a></li>
       </ul>
     </nav>
@@ -48,12 +57,15 @@
       <!-- Welcome -->
       <section class="stack-xl" id="welcome" tabindex="0">
         <div id="main-title-container">
-          <h1 class="heading" id="main-title">
+          <h1 class="heading" id="main-title" tabindex="-1">
             <span>Haunted</span><span>Homes</span>
           </h1>
           <p id="main-subtitle">estate agency</p>
         </div>
-        <p id="main-text">Your Premier Haunted House Specialists</p>
+        <p id="main-text">Your Premier Haunted House Specialists.</p>
+        <p class="sr-only">
+          Press Shift+Tab to focus on the navigation button.
+        </p>
       </section>
       <!-- Who we are -->
       <section id="who-we-are" class="stack-xl" tabindex="0">
@@ -69,7 +81,7 @@
           <div class="member">
             <div class="member-img">
               <img
-                src="assets\agent-1.webp"
+                src="assets/agent-1.webp"
                 alt="A ghost wearing a dark purple suit, in front of a grey background."
               />
             </div>
@@ -85,7 +97,7 @@
           <div class="member">
             <div class="member-img">
               <img
-                src="assets\agent-2.webp"
+                src="assets/agent-2.webp"
                 alt="A ghost with a pointy head, purple and orange cheeks, dark moustache and white beard, in front of a grey background."
               />
             </div>
@@ -103,20 +115,24 @@
       <!-- Available homes -->
       <section id="available-homes" class="stack-xl" tabindex="0">
         <h2 class="heading">Available homes</h2>
-        <div class="stack-lg carousel" data-carousel>
+        <div
+          class="stack-lg carousel"
+          data-carousel
+          aria-label="Image carousel"
+        >
           <button
             class="carousel-button prev"
             data-carousel-button="prev"
-            aria-hidden="true"
-            tabindex="-1"
+            tabindex="0"
+            aria-label="show previous home"
           >
             &#x2039;
           </button>
           <button
             class="carousel-button next"
             data-carousel-button="next"
-            aria-hidden="true"
-            tabindex="-1"
+            tabindex="0"
+            aria-label="show next home"
           >
             &#8250;
           </button>
@@ -124,7 +140,7 @@
             <li class="slide" data-active="true" tabindex="-1">
               <img
                 class="carousel-img"
-                src="/assets/ghost-prop-1.webp"
+                src="assets/ghost-prop-1.webp"
                 alt="Image of a white ghost in front of a Victorian terraced home at dusk."
                 aria-label="Home 1"
               />
@@ -136,10 +152,10 @@
                 views.
               </p>
             </li>
-            <li class="slide" tabindex="0">
+            <li class="slide" tabindex="-1">
               <img
                 class="carousel-img"
-                src="/assets/ghost-prop-2.webp"
+                src="assets/ghost-prop-2.webp"
                 alt="Image of a faint white ghost in front of an Edwardian terraced home, in front of a lavender sky."
                 aria-label="Home 2"
               />
@@ -151,10 +167,10 @@
                 of the nearby lake.
               </p>
             </li>
-            <li class="slide" tabindex="0">
+            <li class="slide" tabindex="-1">
               <img
                 class="carousel-img"
-                src="/assets/ghost-prop-3.webp"
+                src="assets/ghost-prop-3.webp"
                 alt="Image of a blurry ghost in the bay window of a brick house."
                 aria-label="Home 3"
               />
@@ -166,10 +182,10 @@
                 hustle.
               </p>
             </li>
-            <li class="slide" tabindex="0">
+            <li class="slide" tabindex="-1">
               <img
                 class="carousel-img"
-                src="/assets/ghost-prop-4.webp"
+                src="assets/ghost-prop-4.webp"
                 alt="Image of a blurry, humanoid ghost in the window of a modern apartment building."
                 aria-label="Home 4"
               />
@@ -183,11 +199,14 @@
             </li>
           </ul>
         </div>
+        <div aria-live="polite" id="carouselLiveRegion" class="sr-only"></div>
       </section>
       <!-- Contact -->
       <section id="contact" class="stack-xl" tabindex="0">
         <div id="form-container">
-          <h2 class="heading form-heading" aria-label="Contact form">Make contact with us</h2>
+          <h2 class="heading form-heading" aria-label="Contact form">
+            Make contact with us
+          </h2>
           <form id="contact-form" onsubmit="onFormSubmit(event)">
             <input type="text" name="name" placeholder="Name *" required />
             <input
@@ -211,7 +230,7 @@
             </button>
           </form>
         </div>
-        <div id="success-container">
+        <div id="success-container" tabindex="0">
           <h2 class="invert">Excellent!</h2>
           <iframe
             src="https://giphy.com/embed/LrEuHhGTir0gtU0jVH"
@@ -220,8 +239,9 @@
             frameborder="0"
             class="giphy-embed"
             allowfullscreen
+            tabindex="-1"
           ></iframe>
-          <p aria-labelledby="A gif of a dancing skeleton.">
+          <p aria-label="A gif of a dancing skeleton.">
             <a
               href="https://giphy.com/gifs/dance-3d-skeleton-LrEuHhGTir0gtU0jVH"
               >via GIPHY</a
@@ -235,7 +255,7 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer>
+    <footer tabindex="0">
       <div class="footer-content">
         <div class="footer-text">&copy HauntedHomes, 2024</div>
         <div class="footer-text">Images generated in Dall-e</div>
